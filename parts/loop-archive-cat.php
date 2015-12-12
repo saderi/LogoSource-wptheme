@@ -1,4 +1,4 @@
-<div class="large-4 medium-4 end columns" data-equalizer-watch>
+<div class="large-4 medium-6 small-12 end columns" data-equalizer-watch>
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">					
 	<header class="article-header">
 		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>

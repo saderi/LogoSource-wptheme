@@ -7,7 +7,7 @@
 				<?php get_template_part( 'parts/content', 'byline' ); ?>
 		    </header> <!-- end article header -->
 	    </div>
-		<div class="large-8 medium-8 columns">
+		<div class="large-8 medium-7 columns">
 			<section class="entry-content" itemprop="articleBody">
 				<?php the_post_thumbnail('full'); ?>
 				<?php the_content(); ?>
@@ -19,15 +19,15 @@
 			<?php $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
 			<?php $alt_text = get_post(get_post_thumbnail_id())->post_title; ?>
 		</div>
-		<div class="large-4 medium-4 columns download-header">
+		<div class="large-4 medium-5 columns download-header">
 
 			<h2>DownLoad</h2>
-			<ul class="download-list">
-				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/AI/<?php echo $alt_text; ?>.ai"  class="ai " title="File ">File Ai <span>(Adobe Illustrator)</span></a></li>
-				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/CDR/<?php echo $alt_text; ?>.cdr" class="cdr" title="File ">File CDR <span>(Corel Draw)</span></a></li>
-				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/SVG/<?php echo $alt_text; ?>.svg" class="svg" title="File ">File SVG <span>(Scalable Vector Graphics)</span></a></li>
-				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/PNG/<?php echo $alt_text; ?>.png" class="png" title="File ">File PNG <span>(Portable Network Graphics)</span></a></li>
-				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/JPG/<?php echo $alt_text; ?>.jpg" class="jpg" title="File ">File JPG <span></span></a></li>
+			<ul class="download-list panel">
+				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/AI/<?php echo $alt_text; ?>.ai"  class="ai " title="File ">File Ai   <span class="hide-for-medium-only">(Adobe Illustrator)</span></a></li>
+				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/CDR/<?php echo $alt_text; ?>.cdr" class="cdr" title="File ">File CDR <span class="hide-for-medium-only">(Corel Draw)</span></a></li>
+				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/SVG/<?php echo $alt_text; ?>.svg" class="svg" title="File ">File SVG <span class="hide-for-medium-only">(Scalable Vector Graphics)</span></a></li>
+				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/PNG/<?php echo $alt_text; ?>.png" class="png" title="File ">File PNG <span class="hide-for-medium-only">(Portable Network Graphics)</span></a></li>
+				<li><a href="/download/<?php foreach(get_the_category() as $category) {echo $category->slug;} ?>/JPG/<?php echo $alt_text; ?>.jpg" class="jpg" title="File ">File JPG <span class="hide-for-medium-only"></span></a></li>
 			</ul>
 			<br>
 			Tags: <?php the_tags('' . __(' ', 'jointstheme') . '', ' ', ''); ?>		
